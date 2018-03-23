@@ -20,7 +20,7 @@ router.post('/phones', (req, res, next) => {
   const newPhone = new Phone({
     brand: req.body.brand,
     model: req.body.model,
-    specs: req.body.specs || [],
+    specs: req.body.specs || [], // si req.body.specs no lo tengo (undefined), guardo un array vacío
     image: req.body.image,
   });
 
